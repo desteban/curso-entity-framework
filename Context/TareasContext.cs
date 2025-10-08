@@ -29,13 +29,13 @@ public class TareasContext : DbContext
             /* 
             Podemos crear algunos seeders
              */
-            categoria.HasData(
-                new Categoria
-                {
-                    categoriaId = Guid.NewGuid(),
-                    nombre = "Pendientes",
-                    descripcion = "Tareas que requieren atención."
-                });
+            // categoria.HasData(
+            //     new Categoria
+            //     {
+            //         categoriaId = Guid.NewGuid(),
+            //         nombre = "Pendientes",
+            //         descripcion = "Tareas que requieren atención."
+            //     });
         });
     }
 
