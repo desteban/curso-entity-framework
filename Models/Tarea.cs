@@ -13,7 +13,7 @@ public class Tarea
     public DateTime creacion { get; set; }
     public virtual Categoria categoria { get; set; }
     public string resumen { get; set; }
-    public DateTime fechaFinalizacion { get; set; }
+    public DateTime? fechaFinalizacion { get; set; }
     public EstadoTarea estado { get; set; }
 }
 

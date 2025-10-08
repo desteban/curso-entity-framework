@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using entity_framework.Context;
 
@@ -11,9 +12,11 @@ using entity_framework.Context;
 namespace entity_framework.Migrations
 {
     [DbContext(typeof(TareasContext))]
-    partial class TareasContextModelSnapshot : ModelSnapshot
+    [Migration("20251008032617_InitialData")]
+    partial class InitialData
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -109,7 +112,7 @@ namespace entity_framework.Migrations
                         {
                             tareaId = new Guid("2afee021-4f8a-4a60-9824-1703695b23c3"),
                             categoiaId = new Guid("99eb1cae-a854-4503-a1ac-bf13c2453271"),
-                            creacion = new DateTime(2025, 10, 7, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            creacion = new DateTime(2025, 10, 7, 22, 26, 16, 962, DateTimeKind.Local).AddTicks(2688),
                             descripcion = "Realizar la ruta de desarrollo con .net",
                             estado = 1,
                             prioridad = 2,
