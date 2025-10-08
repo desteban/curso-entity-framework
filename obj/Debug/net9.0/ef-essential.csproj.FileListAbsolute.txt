@@ -318,3 +318,4 @@ C:\Users\esteb\www\dotnet\curso-entity-framework\obj\Debug\net9.0\refint\ef-esse
 C:\Users\esteb\www\dotnet\curso-entity-framework\obj\Debug\net9.0\ef-essential.pdb
 C:\Users\esteb\www\dotnet\curso-entity-framework\obj\Debug\net9.0\ef-essential.genruntimeconfig.cache
 C:\Users\esteb\www\dotnet\curso-entity-framework\obj\Debug\net9.0\ref\ef-essential.dll
+C:\Users\esteb\www\dotnet\curso-entity-framework\obj\Debug\net9.0\ef-essential.sourcelink.json

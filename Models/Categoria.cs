@@ -1,5 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json.Serialization;
 
 namespace entity_framework.Models;
 
@@ -13,5 +14,7 @@ public class Categoria
 
     // El costo (esfuerzo) de la tarea
     public int peso { get; set; }
+
+    [JsonIgnore]
     public virtual ICollection<Tarea> tareas { get; set; }
 }

@@ -1,6 +1,7 @@
 using entity_framework.Context;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using entity_framework.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -24,5 +25,50 @@ app.MapGet("/connection", async ([FromServices] TareasContext dbContext) =>
     return Results.Ok($"Status: {dbContext.Database.IsInMemory()}");
 });
 
+
+app.MapGet("/api/tareas", async ([FromServices] TareasContext dbContext) =>
+{
+    var tareas = dbContext.tareas.Include(t => t.categoria);
+    return Results.Ok(tareas);
+});
+
+app.MapPost("/api/tareas", async ([FromServices] TareasContext db, [FromBody] Tarea tarea) =>
+{
+    tarea.tareaId = Guid.NewGuid();
+    tarea.creacion = DateTime.Now;
+
+    await db.tareas.AddAsync(tarea);
+    await db.SaveChangesAsync();
+    string locationUri = "/api/tareas/" + tarea.tareaId.ToString();
+
+    return Results.Created(locationUri, new { message = "Tarea creada con éxito" });
+});
+
+app.MapPut("/api/tareas/{id}", async ([FromServices] TareasContext db, [FromBody] Tarea tarea, [FromRoute] Guid id) =>
+{
+    Tarea? currentTarea = await db.tareas.FindAsync(id);
+
+    if (currentTarea is null)
+    {
+        return Results.NotFound(new
+        {
+            message = "Tarea no encontrada",
+        });
+    }
+
+    currentTarea.titulo = tarea.titulo;
+    currentTarea.descripcion = tarea.descripcion;
+    currentTarea.categoiaId = tarea.categoiaId;
+    currentTarea.estado = tarea.estado;
+
+    if (currentTarea.estado == EstadoTarea.COMPLETADA)
+    {
+        currentTarea.fechaFinalizacion = DateTime.Now;
+    }
+
+    await db.SaveChangesAsync();
+
+    return Results.Ok(new { message = "Tarea actualizada con éxito" });
+});
 
 app.Run();
