@@ -71,4 +71,25 @@ app.MapPut("/api/tareas/{id}", async ([FromServices] TareasContext db, [FromBody
     return Results.Ok(new { message = "Tarea actualizada con éxito" });
 });
 
+app.MapDelete("/api/tareas/{id}", async ([FromServices] TareasContext db, [FromRoute] Guid id) =>
+{
+    Tarea? tarea = await db.tareas.FindAsync(id);
+
+    if (tarea is null)
+    {
+        return Results.BadRequest(new
+        {
+            message = "Error al eliminar la tarea",
+        });
+    }
+
+    db.tareas.Remove(tarea);
+    await db.SaveChangesAsync();
+
+    return Results.Ok(new
+    {
+        message = "Tarea eliminada con éxito",
+    });
+});
+
 app.Run();

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ef-essential")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7e054aa410b38e7ba2ecdf3c6f4dbd6cf79a97d0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4af43dbc43c9359d725c87790cbe4b232179ddc2")]
 [assembly: System.Reflection.AssemblyProductAttribute("ef-essential")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ef-essential")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
