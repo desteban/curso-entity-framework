@@ -23,8 +23,9 @@ public class TareasContext : DbContext
         {
             categoria.ToTable("categoria");
             categoria.HasKey(c => c.categoriaId);
-            categoria.Property(c => c.nombre).IsRequired().HasMaxLength(150);
+            categoria.Property(c => c.nombre).IsRequired().HasMaxLength(200);
             categoria.Property(c => c.descripcion);
+            categoria.Property(c => c.peso);
 
             /* 
             Podemos crear algunos seeders
@@ -49,6 +50,8 @@ public class TareasContext : DbContext
             tarea.Property(t => t.creacion).IsRequired();
             tarea.Property(t => t.prioridad);
             tarea.Ignore(t => t.resumen);
+            tarea.Property(t => t.estado).HasDefaultValue(EstadoTarea.SIN_EMPESAR);
+            tarea.Property(t => t.fechaFinalizacion);
 
             /* 
             Para crear la relación debemos utiliza la propiedad virtual

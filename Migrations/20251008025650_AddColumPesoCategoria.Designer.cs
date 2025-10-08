@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using entity_framework.Context;
 
@@ -11,9 +12,11 @@ using entity_framework.Context;
 namespace entity_framework.Migrations
 {
     [DbContext(typeof(TareasContext))]
-    partial class TareasContextModelSnapshot : ModelSnapshot
+    [Migration("20251008025650_AddColumPesoCategoria")]
+    partial class AddColumPesoCategoria
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -58,14 +61,6 @@ namespace entity_framework.Migrations
 
                     b.Property<string>("descripcion")
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("estado")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasDefaultValue(2);
-
-                    b.Property<DateTime>("fechaFinalizacion")
-                        .HasColumnType("datetime2");
 
                     b.Property<int>("prioridad")
                         .HasColumnType("int");

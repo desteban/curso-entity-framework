@@ -10,5 +10,8 @@ public class Categoria
     public string nombre { get; set; }
 
     public string? descripcion { get; set; }
+
+    // El costo (esfuerzo) de la tarea
+    public int peso { get; set; }
     public virtual ICollection<Tarea> tareas { get; set; }
 }
