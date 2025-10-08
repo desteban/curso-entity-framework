@@ -1,0 +1,79 @@
+###########################
+# Directorios de Compilación
+###########################
+
+# Archivos de compilación generados por el compilador
+[Bb]in/
+[Oo]bj/
+
+# Paquetes NuGet restaurados y caché de dependencias
+.nuget/
+**/packages/
+/src/**/packages/
+/artifacts/
+
+# Archivos de paquetes auto-generados
+*.nupkg
+*.snupkg
+
+########################################
+# Configuración y Archivos de Visual Studio
+########################################
+
+# Solución de Visual Studio (usada para la configuración local)
+*.suo
+*.user
+*.useros
+*.userprefs
+
+# Archivos de caché del instalador y del diseñador
+*.vspscc
+*.vssscc
+*.vshost.*
+*.testsettings
+*.trx
+.vs/
+
+# Base de datos local
+*.mdf
+*.ldf
+
+# Archivos de configuración de Rider (IDE)
+.idea/
+
+################################
+# Aplicaciones Web y ASP.NET Core
+################################
+
+# Recursos publicados
+wwwroot/lib/
+wwwroot/dist/
+
+# Logs y bases de datos generadas en tiempo de ejecución
+logs/
+app_data/
+**/*.db
+
+# Archivos de configuración sensibles/locales
+appsettings.*.json
+appsettings.Development.json
+appsettings.Staging.json
+web.config
+
+# Archivos generados por Herramientas de Visual Studio
+PublishProfiles/
+
+# Certificados de desarrollo HTTPS
+*.pfx
+
+# Carpeta que contiene archivos generados por EF Core (Migraciones)
+[Mm]igrations/
+
+# Archivos y carpetas generados por Docker
+**/Docker/
+**/docker-compose.yml
+**/Dockerfile
+
+# Archivos de código (Si no se usan o se generan)
+*.log
+*.bak
