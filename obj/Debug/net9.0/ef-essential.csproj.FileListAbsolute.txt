@@ -319,3 +319,9 @@ C:\Users\esteb\www\dotnet\curso-entity-framework\obj\Debug\net9.0\ef-essential.p
 C:\Users\esteb\www\dotnet\curso-entity-framework\obj\Debug\net9.0\ef-essential.genruntimeconfig.cache
 C:\Users\esteb\www\dotnet\curso-entity-framework\obj\Debug\net9.0\ref\ef-essential.dll
 C:\Users\esteb\www\dotnet\curso-entity-framework\obj\Debug\net9.0\ef-essential.sourcelink.json
+C:\Users\esteb\www\dotnet\curso-entity-framework\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
+C:\Users\esteb\www\dotnet\curso-entity-framework\bin\Debug\net9.0\Microsoft.OpenApi.dll
+C:\Users\esteb\www\dotnet\curso-entity-framework\bin\Debug\net9.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\esteb\www\dotnet\curso-entity-framework\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\esteb\www\dotnet\curso-entity-framework\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\esteb\www\dotnet\curso-entity-framework\obj\Debug\net9.0\ef-essential.MvcApplicationPartsAssemblyInfo.cs
